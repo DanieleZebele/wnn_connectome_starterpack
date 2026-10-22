@@ -1,0 +1,15 @@
+# dati (33 GB) e ambiente Python
+datasets/
+.venv/
+.venv*/
+
+# cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# artefatti degli esperimenti: si versionano solo config.json e log.jsonl
+studies/lstm/runs/**/*.pt
+studies/lstm/runs/**/*.onnx
+studies/lstm/runs/**/*.zip
+studies/lstm/runs/**/submission/

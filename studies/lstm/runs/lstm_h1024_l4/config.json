@@ -1,0 +1,20 @@
+{
+ "name": "lstm_h1024_l4",
+ "hidden": 1024,
+ "layers": 4,
+ "dropout": 0.0,
+ "loss": "pearson",
+ "epochs": 10,
+ "batch": 256,
+ "chunk": 1000,
+ "lr": 0.002,
+ "weight_decay": 0.0,
+ "limit_train": 0,
+ "seed": 0,
+ "model": {
+  "n_features": 112,
+  "hidden": 1024,
+  "layers": 4,
+  "dropout": 0.0
+ }
+}
