@@ -1,0 +1,99 @@
+s4_specA --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime A --epochs 23
+s4_specB --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime B --epochs 30
+s4_specC --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime C --epochs 80
+s4_specD --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime D --epochs 80
+s4_specA10 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime A --epochs 10
+s5_rw_eval --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights eval
+s5_rw_sqrt --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights sqrt
+s2_diff --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --diff
+s2_diff_ema --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --diff --ema 0.999
+s2_ema999 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --ema 0.999
+s2_ema9995 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --ema 0.9995
+s2_noise01 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --input-noise 0.1
+s2_noise03 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --input-noise 0.3
+s2_idrop01 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --input-dropout 0.1
+s2_idrop03 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --input-dropout 0.3
+s2_proj128 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --proj 128
+s2_proj256 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --proj 256
+s2_gru --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --cell gru
+s2_l3 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --layers 3
+s2_mix02 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss mix --mix-lambda 0.2
+s2_lrfinal0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --lr-final 0.0
+s2_lrfinal10 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --lr-final 0.1
+s2_clip05 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --grad-clip 0.5
+s7_c1_rw_mix_lrf0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights sqrt --loss mix --mix-lambda 0.2 --lr-final 0
+s7_c2_rw_mix_lrf0_proj256 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights sqrt --loss mix --mix-lambda 0.2 --lr-final 0 --proj 256
+s7_c3_mix_lrf0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss mix --mix-lambda 0.2 --lr-final 0
+s7_mix05 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss mix --mix-lambda 0.5
+s1_lr4e3 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --lr 0.004
+s3_lags4 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --lags 1,10,50,200
+s3_lags_long --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --lags 100,500,2000
+s7_proj256_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --proj 256 --seed 1
+s9_skip --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --skip
+s9_head64 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --head-hidden 64
+s9_skip_head64 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --skip --head-hidden 64
+s8_n7950 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --limit-train 7950 --epochs 13
+s8_n5300 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --limit-train 5300 --epochs 20
+s8_n2650 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --limit-train 2650 --epochs 40
+s10_fb1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --forget-bias 1
+s10_fb3 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --forget-bias 3
+s1_bs128 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --batch 128
+s1_bs512 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --batch 512
+s1_wd01 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --weight-decay 0.1
+s1_wd1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --weight-decay 1.0
+s1_ep6 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --epochs 6
+s1_ep15 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --epochs 15
+s1_do01 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --dropout 0.1
+s1_do02 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --dropout 0.2
+s1_wmse --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse
+s13_wmse_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --seed 1
+s13_wmse_seed2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --seed 2
+s13_wmse_rw --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --regime-weights sqrt
+s13_wmse_lrf0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --lr-final 0
+s13_wmse_ep15 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --epochs 15
+s13_wmse_lr3e3 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --lr 0.003
+s1_bs64 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --batch 64
+s6_rwsqrt_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights sqrt --seed 1
+s14_sw1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 1
+s14_sw05 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5
+s14_sw2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 2
+s14_wmse_sw1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss wmse --score-weights 1
+s14_mix_sw1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --loss mix --mix-lambda 0.2 --score-weights 1
+s15_sw05_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --seed 1
+s15_sw05_seed2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --seed 2
+s15_sw025 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.25
+s15_sw05_wmse --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --loss wmse
+s15_sw05_lrf0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --lr-final 0
+s15_sw05_rw --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --regime-weights sqrt
+s6_rwsqrt_seed2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --regime-weights sqrt --seed 2
+s16_bi05 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi
+s16_bi075 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.75 --score-file pscore_bi
+s16_bi05_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --seed 1
+s6_ep8 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --epochs 8
+s6_ep12 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --epochs 12
+s17_bi035 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.35 --score-file pscore_bi
+s17_bi06 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.6 --score-file pscore_bi
+s17_bi05_floor005 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --score-floor 0.05
+s17_bi05_floor0005 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --score-floor 0.005
+s17_bi05_wmse --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --loss wmse
+s17_bi05_mix --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --loss mix --mix-lambda 0.2
+s17_bi05_ep14 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --epochs 14
+s17_bi05_lr3e3 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --lr 0.003
+s17_bi05_rw --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --regime-weights sqrt
+s6_ema999_true --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --ema 0.999
+s16_bi05_seed2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --seed 2
+s20_tv_bi05_seed0 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --train-on train+valid
+s20_tv_bi05_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --train-on train+valid --seed 1
+s6_ema999_lrf30 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --ema 0.999 --lr-final 0.3 --epochs 14
+s18_bi05_ep14_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --epochs 14 --seed 1
+s18_bi05_ep14_seed2 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --epochs 14 --seed 2
+s18_bi05_h96 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --hidden 96
+s18_bi05_h160 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --hidden 160
+s18_bi05_ep20 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --epochs 20
+s18_bi06_seed1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.6 --score-file pscore_bi --seed 1
+s18_bi05_h64 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --hidden 64
+s18_bi05_h64_l1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-file pscore_bi --hidden 64 --layers 1
+s19_ramp_0_1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.01 --score-weights-end 1 --score-file pscore_bi
+s19_ramp_03_1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.3 --score-weights-end 1 --score-file pscore_bi
+s19_ramp_05_1 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 0.5 --score-weights-end 1 --score-file pscore_bi
+s19_ramp_1_05 --hidden 128 --layers 2 --dropout 0 --epochs 10 --lr 0.002 --batch 256 --chunk 1000 --loss pearson --weight-decay 0 --seed 0 --score-weights 1 --score-weights-end 0.5 --score-file pscore_bi
