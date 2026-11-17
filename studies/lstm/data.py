@@ -1,6 +1,6 @@
-"""Cache dei dataset in /dev/shm come array numpy (feature float16, target float32).
+"""Cache dei dataset in /dev/shm come array numpy (feature float16, target float32, maschera is_scored).
 
-Uso:  python studies/lstm/data.py            # crea la cache di train e valid
+Uso:  python data.py [--force]  # crea la cache di train e valid se manca (~58 GB in RAM, qualche minuto)
 La cache vive in RAM e sparisce al riavvio della macchina: in quel caso basta rilanciare.
 """
 from concurrent.futures import ProcessPoolExecutor
@@ -42,6 +42,7 @@ def _fill(args):
 
 
 def build_cache(split, workers=32):
+    """Una sequenza per row group del parquet: (N, 20000, 112) float16, (N, 20000, 2) float32, (N, 20000) bool."""
     pf = pq.ParquetFile(DATASETS / f'{split}.parquet')
     n = pf.num_row_groups
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -60,7 +61,7 @@ def build_cache(split, workers=32):
 
 
 def load(split):
-    """Restituisce dict con X (N,20000,112) f16, Y (N,20000,2) f32, scored (N,20000) bool, seq (N,)."""
+    """dict con X (N,20000,112) f16, Y (N,20000,2) f32, scored (N,20000) bool, seq (N,), in memmap dalla cache."""
     p = _paths(split)
     if not p['seq'].exists():
         build_cache(split)
@@ -68,5 +69,8 @@ def load(split):
 
 
 if __name__ == '__main__':
-    for split in sys.argv[1:] or SPLITS:
-        build_cache(split)
+    for split in SPLITS:
+        if '--force' in sys.argv or not _paths(split)['seq'].exists():
+            build_cache(split)
+        else:
+            print(f'{split}: cache già presente in {CACHE} (--force per ricrearla)')

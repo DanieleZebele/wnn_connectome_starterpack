@@ -1,0 +1,32 @@
+{
+ "name": "s1183_tvT_hl15_l256x2_seed0",
+ "hidden": 256,
+ "layers": 2,
+ "train_on": "train+valid",
+ "lookahead": 0,
+ "distill": "",
+ "distill_weight": 3.0,
+ "aux_yfut_w": 4.0,
+ "score_weights": 0.5,
+ "tick_bins": 81,
+ "hl_sigma": 1.5,
+ "epochs": 10,
+ "batch": 256,
+ "chunk": 1000,
+ "lr": 0.002,
+ "lr_final": 0.02,
+ "grad_clip": 1.0,
+ "seed": 0,
+ "limit_train": 0,
+ "limit_valid": 0,
+ "force": false,
+ "model": {
+  "n_features": 112,
+  "hidden": 256,
+  "layers": 2,
+  "tick_bins": 81,
+  "aux_yfut": 20,
+  "lookahead": 0
+ },
+ "n_params": 951990
+}

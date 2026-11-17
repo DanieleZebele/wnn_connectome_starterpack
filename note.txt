@@ -1,6 +1,0 @@
-1. Fondamentale capire gli indici quanto a quanto span temporale fanno riferimento, capire le dipendenze temporali.
-    Capire in quali sequenze e punti sbaglia di piu
-
-
-2.  layers x2 --> x2 tempo. 1 layer = 0.6779, 2 = 0.6804, 4 = 0.6805  (h 128)
-    hidden x2 --> x3 tempo. 256 0.6770
